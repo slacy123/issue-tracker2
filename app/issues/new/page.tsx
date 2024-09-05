@@ -11,11 +11,7 @@ import {zodResolver} from '@hookform/resolvers/zod'
 import {createIssueSchema} from '@/app/validationSchemas'
 import {z} from 'zod';
 
-z.infer<typeof createIssueSchema>;
-interface IssueForm {
-    title: string;
-    description: string; 
-}
+type IssueForm = z.infer<typeof createIssueSchema>;
 
 const NewIssuePage = () => {
   const router = useRouter()
